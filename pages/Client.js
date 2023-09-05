@@ -12,7 +12,7 @@ export default function Cli({data}){
             <Client/>
             <ListeC data={data}/>
         </>
-    )
+    )  
 }
 export async function getServerSideProps() {
     const res = await axios.get("http://localhost:8000/api/clients");
