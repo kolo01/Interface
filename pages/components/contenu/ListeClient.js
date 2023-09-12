@@ -18,7 +18,7 @@ export default function ListeC({data}) {
     Object.values(data)[4].map((data,key)=> {
         setId(data.id),setAdr(data.adresse),setDette(data.detteAnterieur),setNom(data.nomClient),setRem(data.remarqueClient),setNumero(data.numeroCLient)
         })
-   },[])
+   },[data])
  
    const updateUser = async () =>{
     await axios.put(`http://localhost:8000/api/clients/${id}`,{
